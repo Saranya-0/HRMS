@@ -25,7 +25,7 @@ function Dashboard() {
         </div>
         <div className="text-right">
           <p className="text-gray-500">Entry Time</p>
-          <p className="text-xl font-bold text-pink-600">10:11 AM</p>
+          <p className="text-xl font-bold text-pink-600">10:30 AM</p>
         </div>
       </div>
 
@@ -37,7 +37,7 @@ function Dashboard() {
           <table className="w-full text-sm text-left text-gray-600">
             <thead>
               <tr className="bg-gray-100">
-                <th className="p-3">Date</th>
+                <th className="p-3">Date of application</th>
                 <th className="p-3">Application Type</th>
                 <th className="p-3">Duration</th>
                 <th className="p-3">Status</th>
@@ -97,7 +97,7 @@ function Dashboard() {
             <div>
               <h3 className="text-md font-semibold mb-2">Leave Credit</h3>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li>Casual Leave: <span className="text-green-600">5 Days</span></li>
+                <li>Casual Leave: <span className="text-green-600">6 Days</span></li>
                 <li>Sick Leave: <span className="text-green-600">4 Days</span></li>
                 <li>Annual Leave: <span className="text-green-600">10 Days</span></li>
               </ul>
