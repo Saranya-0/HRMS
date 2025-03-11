@@ -1,7 +1,7 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route,  Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './Components/Footer';
-import Header from './Components/Header';
+// import Header from './Components/Header';
 import SignUp from './Pages/SignUp';
 import SignIn from './Pages/SignIn';
 import ForgotPassword from './Pages/ForgotPassword';
@@ -12,6 +12,7 @@ import Layout from './layout/Layout';
 
 function App() {
   return (
+    
     <>
       {/* <Header /> */}
       
@@ -29,6 +30,8 @@ function App() {
         
         
       </Routes>
+     
+
       <Footer />
     </>
   );

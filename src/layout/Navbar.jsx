@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaSearch, FaBell, FaUserCircle, FaMoon, FaSun } from "react-icons/fa";
+import { FaSearch,  FaUserCircle, FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Navbar() {
