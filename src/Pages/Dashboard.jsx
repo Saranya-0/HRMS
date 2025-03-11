@@ -11,6 +11,7 @@ const attendanceData = [
   { day: "04", present: 6, late: 4 },
 ];
 
+
 function Dashboard() {
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
