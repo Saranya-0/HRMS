@@ -14,7 +14,7 @@ const attendanceData = [
 function Dashboard() {
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
-      {/* Header Section */}
+    
       <div className="bg-white shadow-md p-6 rounded-lg flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <FaCloudSun className="text-yellow-500 text-3xl" />
@@ -29,9 +29,9 @@ function Dashboard() {
         </div>
       </div>
 
-      {/* Main Content */}
+     
       <div className="grid grid-cols-3 gap-6 mt-6">
-        {/* Approval List */}
+      
         <div className="col-span-2 bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-lg font-bold mb-4">Approval</h2>
           <table className="w-full text-sm text-left text-gray-600">
@@ -60,16 +60,16 @@ function Dashboard() {
           </table>
         </div>
 
-        {/* Personal Calendar */}
+       
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-lg font-bold mb-4">Personal Calendar</h2>
           <Calendar className="w-full" />
         </div>
       </div>
 
-      {/* Attendance & Notices */}
+    
       <div className="grid grid-cols-3 gap-6 mt-6">
-        {/* Attendance Statistics */}
+        
         <div className="col-span-2 bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-lg font-bold mb-4">Attendance Statistics</h2>
           <ResponsiveContainer width="100%" height={200}>
@@ -83,8 +83,7 @@ function Dashboard() {
           </ResponsiveContainer>
         </div>
 
-       
-        {/* Notices & Leave Credit in Row */}
+      
         <div className="bg-white p-6 rounded-lg shadow-md flex flex-col">
           <h2 className="text-lg font-bold mb-4">Notices & Leave Credit</h2>
           <div className="flex justify-between">
@@ -99,7 +98,7 @@ function Dashboard() {
               <h3 className="text-md font-semibold mb-2">Leave Credit</h3>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li>Casual Leave: <span className="text-green-600">5 Days</span></li>
-                <li>Sick Leave: <span className="text-green-600">3 Days</span></li>
+                <li>Sick Leave: <span className="text-green-600">4 Days</span></li>
                 <li>Annual Leave: <span className="text-green-600">10 Days</span></li>
               </ul>
             </div>
