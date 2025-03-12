@@ -2,10 +2,11 @@ import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth, db, googleProvider } from '../firebase/FirebaseConfig';
+import { auth, db, googleProvider } from '../Firebase/FirebaseConfig';
 import { doc, setDoc } from 'firebase/firestore';
-import Textarea from '../Components/Textarea';
-import Button from '../Components/Button';
+
+import { Input } from "../Components/Input";
+import { Button } from "../Components/Button";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -64,35 +65,16 @@ function SignUp() {
         {firebaseError && <p className='text-red-500 text-center mb-3'>{firebaseError}</p>}
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Textarea
-            label='Name'
-            name='name'
-            placeholder='Enter full name'
-            register={register('name', { required: 'Name is required' })}
-            errors={errors.name?.message}
-          />
-          <Textarea
-            label='Email'
-            name='email'
-            type='email'
-            placeholder='Enter email'
-            register={register('email', {
-              required: 'Email is required',
-              pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email format' },
-            })}
-            errors={errors.email?.message}
-          />
-          <Textarea
-            label='Password'
-            name='password'
-            type='password'
-            placeholder='Enter password'
-            register={register('password', {
-              required: 'Password is required',
-              minLength: { value: 6, message: 'Password must be at least 6 characters' },
-            })}
-            errors={errors.password?.message}
-          />
+        <Input label='Name'name='name'type='text'placeholder='Enter full name'register={register('name', { required: 'Name is required' })}
+          errors={errors.name?.message}/>
+
+           <Input label='Email'name='email'type='email'placeholder='Enter email'register={register('email', {required: 'Email is required',pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email format' },})}
+           errors={errors.email?.message}/>
+
+             <Input label='Password'name='password'type='password'placeholder='Enter password'register={register('password', { required: 'Password is required',
+            minLength: { value: 6, message: 'Password must be at least 6 characters' },})}
+             errors={errors.password?.message}/>
+
 
           <Button type='submit' variant='primary' disabled={isSubmitting}>
             {isSubmitting ? 'Signing Up...' : 'Sign Up'}
@@ -104,12 +86,14 @@ function SignUp() {
           <span className='px-2 text-gray-500 text-sm'>or</span>
           <div className='flex-grow border-t border-gray-300'></div>
         </div>
-
-        <Button variant='secondary' onClick={handleGoogleSignIn} className=''>
-          {' '}
-          <img src='https://www.svgrepo.com/show/475656/google-color.svg' alt='Google' className=' w-8 ' />
-          <span className='text-gray-600 '>Continue with Google</span>
-        </Button>
+        <Button
+      variant="secondary"
+      onClick={handleGoogleSignIn} 
+      className="w-[300px] h-[50px] bg-gray-100 border border-gray-300 flex items-center justify-center gap-3 rounded-lg shadow-sm 
+                 hover:bg-gray-200 transition-all">
+      <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-6 h-6" />
+      <span className="text-gray-600 font-medium text-base">Continue with Google</span>
+    </Button>
 
         <p className='text-center text-gray-600 mt-4'>
           Already have an account?{' '}

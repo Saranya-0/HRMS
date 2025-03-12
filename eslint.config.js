@@ -10,8 +10,14 @@ export default [
   pluginJs.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
+
     rules: {
       "react/react-in-jsx-scope": "off", // Disable JSX scope rule
+      "no-unused-vars":"off",
+      "react/prop-types": "off"
+      // "react/no-unescaped-entities": "off"
+
     },
   },
 ];
+
